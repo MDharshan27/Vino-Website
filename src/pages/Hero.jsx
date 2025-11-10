@@ -34,7 +34,7 @@ const Hero = () => {
       ></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-start h-full text-center px-4 md:px-10 pt-20 md:pt-32 lg:pt-40">
+      <div className="relative z-10 flex flex-col items-center justify-start h-full text-center px-4 md:px-10 pt-40 md:pt-32 lg:pt-40">
         {/* Main Heading Letter-by-Letter */}
         <motion.h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair text-[#E6E39C] mb-2">
           {firstLine.split("").map((char, index) => (
