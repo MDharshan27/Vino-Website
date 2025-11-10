@@ -36,11 +36,12 @@ const AnimatedMenuLinks = ({ closeMenu }) => {
     <div className="fixed top-0 left-0 w-full h-screen bg-[#043915] z-50 flex flex-col justify-center items-start px-12">
       {/* Close Button */}
       <div
-        className="absolute top-6 right-6 text-4xl text-[#E6E39C] cursor-pointer z-50"
+        className="absolute top-4 right-6 text-4xl md:text-5xl text-[#E6E39C] cursor-pointer z-50"
         onClick={closeMenu}
       >
         ✕
       </div>
+
 
       {/* Menu Links */}
       <div className="w-full">
@@ -48,14 +49,14 @@ const AnimatedMenuLinks = ({ closeMenu }) => {
           <div
             key={index}
             ref={(el) => (linksRef.current[index] = el)}
-            className="overflow-hidden my-6"
+            className="overflow-hidden my-5"
           >
             <div
               className="cursor-pointer"
               onClick={() => handleLinkClick(link.path)}
             >
               <span
-                className="block text-[#E6E39C] text-4xl sm:text-5xl md:text-6xl font-light font-playfair tracking-tight leading-snug hover:text-white transition-all duration-300"
+                className="block text-[#E6E39C] text-4xl md:text-6xl font-light font-playfair tracking-tight leading-snug hover:text-white transition-all duration-300"
               >
                 {link.label}
               </span>

@@ -1,13 +1,27 @@
 // Navbar.jsx
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import AnimatedMenuLinks from "./AnimatedMenuLinks";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Detect scroll
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 font-poppins bg-transparent md:bg-transparent">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 font-poppins transition-all duration-500 ${
+        scrolled
+          ? "backdrop-blur-sm bg-[#043915]/50 shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <h1 className="text-2xl md:text-3xl font-playfair text-[#E6E39C] tracking-wide">
