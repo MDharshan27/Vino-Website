@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
 import OurStory from "./pages/OurStory";
 import Countdown from "./pages/Countdown";
+import Event from "./pages/Event"
 import Gallery from "./pages/Gallery";
 
 function App() {
@@ -22,13 +23,15 @@ function App() {
       </section>
 
       <Countdown/>
+            
+      <section id="events">
+        <Event />
+      </section>
 
       <section id="gallery">
         <Gallery />
       </section>
-      
-      {/* <section id="events"><Events /></section> */}
-      {/* <section id="contact"><Contact /></section> */}
+    
     </div>
   );
 }

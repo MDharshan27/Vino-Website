@@ -18,7 +18,7 @@ const Gallery = () => {
   const headingText = "Our Beautiful Moments";
 
   return (
-    <section className="py-12 md:py-16 bg-[#E6E39C] text-[#043915] font-playfair px-6 md:px-16 flex flex-col items-center">
+    <section className="py-12 md:py-16 bg-white text-[#043915] font-playfair px-6 md:px-16 flex flex-col items-center">
       {/* Animated Heading */}
       <motion.h2
         className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12"
