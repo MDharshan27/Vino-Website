@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
 import OurStory from "./pages/OurStory";
+import Countdown from "./pages/Countdown";
 // (Add more sections later: Gallery, Events, Contact)
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
       <section id="ourstory">
         <OurStory />
       </section>
+
+      <Countdown/>
 
       {/* Future Sections */}
       {/* <section id="gallery"><Gallery /></section> */}
