@@ -21,7 +21,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full h-[140vh] md:h-[150vh] lg:h-[160vh]">
       {/* Background Image with gradient overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -30,12 +30,11 @@ const Hero = () => {
             rgba(4, 57, 21, 0.7),
             rgba(176, 206, 136, 0.3)
           ), url(${heroImage})`,
-          backgroundPosition: 'center bottom',
         }}
       ></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-10">
+      <div className="relative z-10 flex flex-col items-center justify-start h-full text-center px-4 md:px-10 pt-20 md:pt-32 lg:pt-40">
         {/* Main Heading Letter-by-Letter */}
         <motion.h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair text-[#E6E39C] mb-2">
           {firstLine.split("").map((char, index) => (
