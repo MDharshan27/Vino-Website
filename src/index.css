@@ -3,6 +3,11 @@
 body {
     font-family: "Poppins", sans-serif;
 }
-h1, h2, h3, a, span {
+h1, h2, h3, a, p, span {
   font-family: "Playfair Display", serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+

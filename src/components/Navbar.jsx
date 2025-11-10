@@ -1,4 +1,3 @@
-// Navbar.jsx
 import React, { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import AnimatedMenuLinks from "./AnimatedMenuLinks";
@@ -7,12 +6,14 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Detect scroll
+  // Detect scroll for background change
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const links = ["Home", "Our Story", "Gallery", "Events"];
 
   return (
     <nav
@@ -30,19 +31,20 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <ul className="hidden md:flex space-x-10 text-[#E6E39C] font-medium">
-          {["Home", "Our Story", "Gallery", "Events", "Contact"].map(
-            (link, i) => (
+          {links.map((link, i) => {
+            const id = link.toLowerCase().replace(/\s+/g, "");
+            return (
               <li key={i}>
                 <a
-                  href={`#${link.toLowerCase().replace(/\s+/g, "")}`}
+                  href={`#${id}`}
                   className="relative group transition font-medium"
                 >
                   {link}
                   <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#043915] group-hover:w-full transition-all duration-300"></span>
                 </a>
               </li>
-            )
-          )}
+            );
+          })}
         </ul>
 
         {/* Mobile Hamburger */}
@@ -56,11 +58,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       <AnimatePresence>
-        {menuOpen && (
-          <AnimatedMenuLinks closeMenu={() => setMenuOpen(false)} />
-        )}
+        {menuOpen && <AnimatedMenuLinks closeMenu={() => setMenuOpen(false)} />}
       </AnimatePresence>
     </nav>
   );
