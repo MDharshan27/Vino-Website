@@ -36,7 +36,7 @@ const Event = () => {
       <div className="flex flex-col items-center justify-center gap-12 px-6 md:px-16">
 
         {/* Animated Heading */}
-        <motion.h2 className="text-4xl md:text-5xl font-semibold mb-12 text-[#043915]">
+        <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-12 text-[#043915]">
           {headingText.split("").map((char, index) => (
             <motion.span
               key={index}

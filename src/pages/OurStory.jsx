@@ -63,7 +63,7 @@ const OurStory = () => {
           
           {/* Animated Heading */}
           <motion.h2
-            className="text-4xl md:text-5xl font-semibold mb-6 text-[#043915]"
+            className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 text-[#043915]"
           >
             {headingText.split("").map((char, index) => (
               <motion.span
