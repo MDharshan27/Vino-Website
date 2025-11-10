@@ -20,7 +20,7 @@ const Navbar = () => {
       transition={{ type: "spring", stiffness: 120, damping: 20, duration: 0.8 }}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 font-poppins ${
         scrolled
-          ? "backdrop-blur-md bg-[#043915]/80 shadow-lg"
+          ? "backdrop-blur-sm bg-[#043915]/50 shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -49,7 +49,7 @@ const Navbar = () => {
                 className="relative group transition font-medium"
               >
                 {link}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#4C763B] group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#043915] group-hover:w-full transition-all duration-300"></span>
               </a>
             </motion.li>
           ))}
