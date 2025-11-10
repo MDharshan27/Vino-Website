@@ -2,11 +2,11 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
 const menuLinks = [
-  { path: "./", label: "Hero" },
-  { path: "./ourstory", label: "OurStory" },
-  { path: "./countdown", label: "Countdown" },
-  { path: "./gallery", label: "Gallery" },
-  { path: "./event", label: "Event" },
+  { path: "#hero", label: "Hero" },
+  { path: "#ourstory", label: "Our Story" },
+  { path: "#countdown", label: "Countdown" },
+  { path: "#gallery", label: "Gallery" },
+  { path: "#event", label: "Event" },
 ];
 
 const AnimatedMenuLinks = ({ closeMenu }) => {
@@ -30,10 +30,14 @@ const AnimatedMenuLinks = ({ closeMenu }) => {
   };
 
   const handleLinkClick = (path) => {
-    tl.current.reverse().eventCallback("onReverseComplete", () => {
-      window.location.href = path;
-      closeMenu();
-    });
+    // Scroll smoothly to section instead of redirect
+    const target = document.querySelector(path);
+    if (target) {
+      tl.current.reverse().eventCallback("onReverseComplete", () => {
+        target.scrollIntoView({ behavior: "smooth" });
+        closeMenu();
+      });
+    }
   };
 
   return (
@@ -52,15 +56,8 @@ const AnimatedMenuLinks = ({ closeMenu }) => {
       {/* Menu Links */}
       <div className="w-full">
         {menuLinks.map((link, index) => (
-          <div
-            key={index}
-            ref={(el) => (linksRef.current[index] = el)}
-            className="overflow-hidden my-5"
-          >
-            <div
-              className="cursor-pointer"
-              onClick={() => handleLinkClick(link.path)}
-            >
+          <div key={index} ref={(el) => (linksRef.current[index] = el)} className="overflow-hidden my-5">
+            <div className="cursor-pointer" onClick={() => handleLinkClick(link.path)}>
               <span className="block text-[#E6E39C] text-4xl md:text-6xl font-light font-playfair tracking-tight leading-snug hover:text-white transition-all duration-300">
                 {link.label}
               </span>
