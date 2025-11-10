@@ -38,7 +38,7 @@ const OurStory = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#E6E39C] text-[#043915] font-playfair">
+    <section className="py-20 bg-[#E6E39C] text-[#043915] font-playfair">
       <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 px-6 md:px-16">
         
         {/* Left Side - Image */}
