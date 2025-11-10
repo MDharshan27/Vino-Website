@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import heroImage from "../assets/SAT06874.jpg";
+import heroImage from "../assets/SAT06874-copy.jpg";
 
 const Hero = () => {
   const firstLine = "Love isn’t something you find, it’s";
