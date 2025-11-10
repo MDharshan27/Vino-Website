@@ -4,8 +4,8 @@ import { gsap } from "gsap";
 const menuLinks = [
   { path: "home", label: "Hero" },
   { path: "ourstory", label: "Our Story" },
-  { path: "gallery", label: "Gallery" },
   { path: "event", label: "Events" },
+  { path: "gallery", label: "Gallery" },  
 ];
 
 const AnimatedMenuLinks = ({ closeMenu }) => {
