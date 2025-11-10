@@ -13,7 +13,7 @@ const Hero = () => {
       y: 0,
       opacity: 1,
       transition: {
-        delay: i * 0.05, // stagger each letter
+        delay: i * 0.05,
         duration: 0.5,
         ease: "easeOut",
       },
@@ -30,6 +30,7 @@ const Hero = () => {
             rgba(4, 57, 21, 0.7),
             rgba(176, 206, 136, 0.3)
           ), url(${heroImage})`,
+          backgroundPosition: 'center bottom',
         }}
       ></div>
 
