@@ -96,7 +96,7 @@ const Countdown = () => {
 
             {/* Paragraph */}
             <motion.p
-            className="mt-6 md:mt-8 text-center text-base sm:text-lg md:text-xl text-[#06491b]/90 max-w-2xl"
+            className="mt-6 md:mt-8 text-center text-base sm:text-lg md:text-xl text-black/90 max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
