@@ -24,7 +24,7 @@ function App() {
 
       <Countdown/>
             
-      <section id="events">
+      <section id="event">
         <Event />
       </section>
 

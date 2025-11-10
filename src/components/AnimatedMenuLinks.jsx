@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 const menuLinks = [
   { path: "home", label: "Hero" },
   { path: "ourstory", label: "Our Story" },
-  { path: "event", label: "Events" },
+  { path: "event", label: "Event" },
   { path: "gallery", label: "Gallery" },  
 ];
 
