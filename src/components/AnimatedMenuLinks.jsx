@@ -1,4 +1,3 @@
-// AnimatedMenuLinks.jsx
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
@@ -12,36 +11,43 @@ const menuLinks = [
 
 const AnimatedMenuLinks = ({ closeMenu }) => {
   const linksRef = useRef([]);
+  const menuRef = useRef(null);
+  const tl = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
+    // Animate menu open
+    tl.current = gsap.timeline();
+    tl.current.fromTo(
       linksRef.current,
       { y: 75, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        stagger: 0.1,
-        ease: "power4.out",
-      }
+      { y: 0, opacity: 1, duration: 1, stagger: 0.1, ease: "power4.out" }
     );
   }, []);
 
+  const handleClose = () => {
+    // Reverse animation on close
+    tl.current.reverse().eventCallback("onReverseComplete", closeMenu);
+  };
+
   const handleLinkClick = (path) => {
-    window.location.href = path;
-    closeMenu();
+    tl.current.reverse().eventCallback("onReverseComplete", () => {
+      window.location.href = path;
+      closeMenu();
+    });
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-screen bg-[#043915] z-50 flex flex-col justify-center items-start px-12">
+    <div
+      ref={menuRef}
+      className="fixed top-0 left-0 w-full h-screen bg-[#043915] z-50 flex flex-col justify-center items-start px-12"
+    >
       {/* Close Button */}
       <div
         className="absolute top-4 right-6 text-4xl md:text-5xl text-[#E6E39C] cursor-pointer z-50"
-        onClick={closeMenu}
+        onClick={handleClose}
       >
         ✕
       </div>
-
 
       {/* Menu Links */}
       <div className="w-full">
@@ -55,9 +61,7 @@ const AnimatedMenuLinks = ({ closeMenu }) => {
               className="cursor-pointer"
               onClick={() => handleLinkClick(link.path)}
             >
-              <span
-                className="block text-[#E6E39C] text-4xl md:text-6xl font-light font-playfair tracking-tight leading-snug hover:text-white transition-all duration-300"
-              >
+              <span className="block text-[#E6E39C] text-4xl md:text-6xl font-light font-playfair tracking-tight leading-snug hover:text-white transition-all duration-300">
                 {link.label}
               </span>
             </div>
