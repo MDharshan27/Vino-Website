@@ -6,10 +6,10 @@ import img1 from "../assets/SAT07123.jpg";
 import img2 from "../assets/SAT06824.jpg";
 import img3 from "../assets/SAT07336.jpg";
 import img4 from "../assets/SAT06727.jpg";
-import img5 from "../assets/SAT06713.jpg";
+import img5 from "../assets/SAT07287.jpg";
 import img6 from "../assets/SAT07558.jpg";
 import img7 from "../assets/SAT06956.jpg";
-import img8 from "../assets/SAT07287.jpg";
+import img8 from "../assets/SAT06713.jpg";
 
 const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8];
 
