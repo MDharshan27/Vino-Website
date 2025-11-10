@@ -26,7 +26,7 @@ const Intro = () => {
     <section className="py-16 bg-white text-[#043915] overflow-hidden">
       {/* Animated Heading */}
       <motion.h1
-        className="text-4xl md:text-5xl lg:text-6xl font-playfair text-center text-[#043915] mb-12"
+        className="text-3xl sm:text-4xl md:text-5xl font-semibold font-playfair text-center text-[#043915] mb-12"
       >
         {headingText.split("").map((char, index) => (
           <motion.span
