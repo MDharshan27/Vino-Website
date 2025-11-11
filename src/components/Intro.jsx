@@ -19,7 +19,7 @@ const Intro = () => {
   };
 
   const headingText = "Meet Our Couple";
-  const brideName = "Vinithini";
+  const brideName = "Vinothini";
   const groomName = "Vinoth";
 
   return (
