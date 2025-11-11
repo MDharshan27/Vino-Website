@@ -6,11 +6,13 @@ const Loader = ({ onFinish }) => {
   const [slide, setSlide] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setSlide(false), 3000); // slide up after 3s
+    // Slide out animation after 5s
+    const timer = setTimeout(() => setSlide(false), 5000);
+    // End loader after 5.5s
     const endTimer = setTimeout(() => {
       setLoading(false);
       if (onFinish) onFinish();
-    }, 5500); // remove loader after 5.5s
+    }, 5500);
 
     return () => {
       clearTimeout(timer);
@@ -39,10 +41,8 @@ const Loader = ({ onFinish }) => {
     >
       <div
         style={{
-          width: "30vw",
-          maxWidth: "200px",
-          height: "30vw",
-          maxHeight: "200px",
+          width: "clamp(150px, 30vw, 250px)", // responsive width
+          height: "clamp(150px, 30vw, 250px)", // responsive height
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

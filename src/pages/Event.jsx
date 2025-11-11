@@ -25,16 +25,16 @@ const Event = () => {
     }),
   };
 
+  // Keep Venue visually in the middle
   const eventDetails = [
-    { label: "Venue", value: "Ambals Wedding Hall, Maskeliya", icon: venueIcon },
     { label: "Date", value: "Thursday, November 27, 2025", icon: dateIcon },
+    { label: "Venue", value: "Sri Ambals Wedding Hall, Maskeliya", icon: venueIcon, mapLink: "https://maps.app.goo.gl/v8Xx9opTYNcxBAbw7" },
     { label: "Time", value: "09:00 AM - 12:30 PM", icon: timeIcon },
   ];
 
   return (
     <section className="py-20 bg-[#E6E39C] text-[#043915] font-playfair">
       <div className="flex flex-col items-center justify-center gap-12 px-6 md:px-16">
-
         {/* Animated Heading */}
         <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-12 text-[#043915]">
           {headingText.split("").map((char, index) => (
@@ -52,7 +52,7 @@ const Event = () => {
           ))}
         </motion.h2>
 
-       {/* Event Info with Icons */}
+        {/* Event Info with Icons */}
         <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-3 text-center gap-6 md:gap-30">
           {eventDetails.map((item, i) => (
             <motion.div
@@ -62,7 +62,8 @@ const Event = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col items-center gap-4"
+              className={`flex flex-col items-center gap-4
+                ${item.label === "Venue" ? "order-2" : ""} md:order-0`}
             >
               {/* Icon */}
               <img
@@ -72,13 +73,25 @@ const Event = () => {
               />
 
               {/* Text */}
-              <div className="mt-2">
+              <div className="mt-2 flex flex-col items-center gap-2">
                 <span className="font-semibold block text-lg sm:text-xl md:text-2xl lg:text-3xl">
                   {item.label}
                 </span>
                 <span className="block text-sm sm:text-base md:text-lg lg:text-xl mt-1 text-[#06491b]/90">
                   {item.value}
                 </span>
+
+                {/* Show Map Button for Venue */}
+                {item.label === "Venue" && item.mapLink && (
+                  <a
+                    href={item.mapLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block px-4 py-1 bg-[#043915] text-white rounded hover:bg-[#06491b] transition"
+                  >
+                    View Map
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
@@ -89,4 +102,3 @@ const Event = () => {
 };
 
 export default Event;
-
