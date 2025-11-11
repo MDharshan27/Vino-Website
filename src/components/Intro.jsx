@@ -81,7 +81,7 @@ const Intro = () => {
           </motion.h3>
 
           <p className="text-gray-600 font-playfair">
-            She inspires minds every day and guides others with patience and wisdom.
+            She inspires hearts and minds, guiding with patience and wisdom.
           </p>
         </motion.div>
 
@@ -122,7 +122,7 @@ const Intro = () => {
           </motion.h3>
 
         <p className="text-gray-600 font-playfair">
-          He protects and serves the community, bringing courage and dedication to every challenge.
+          He protects the community with courage, honor, and dedication each day.
         </p>
         </motion.div>
       </div>
