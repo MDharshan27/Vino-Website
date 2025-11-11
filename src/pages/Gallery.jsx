@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 // Import images
 import img1 from "../assets/SAT07123.jpg";
-import img2 from "../assets/SAT06824.jpg";
+import img2 from "../assets/SAT07494.jpg";
 import img3 from "../assets/SAT07336.jpg";
 import img4 from "../assets/SAT06727.jpg";
 import img5 from "../assets/SAT07287.jpg";
