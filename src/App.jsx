@@ -6,6 +6,7 @@ import OurStory from "./pages/OurStory";
 import Countdown from "./pages/Countdown";
 import Event from "./pages/Event"
 import Gallery from "./pages/Gallery";
+import Wish from "./components/Wish";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
       <section id="gallery">
         <Gallery />
       </section>
+
+      <Wish/>
     
     </div>
   );
