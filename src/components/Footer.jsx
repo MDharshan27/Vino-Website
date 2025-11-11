@@ -53,6 +53,9 @@ const Footer = () => {
             <a href="https://www.facebook.com/studioravana" className="hover:text-[#E6E39C] transition">
               <FaFacebookF />
             </a>
+            <a href="https://www.instagram.com/studio_ravana?igsh=Y2Zxam83dWtsNHpn" className="hover:text-[#E6E39C] transition">
+              <FaInstagram />
+            </a>
             <a href="https://wa.me/c/94763333673" className="hover:text-[#E6E39C] transition">
               <FaWhatsapp />
             </a>

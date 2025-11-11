@@ -8,10 +8,12 @@ import Event from "./pages/Event"
 import Gallery from "./pages/Gallery";
 import Wish from "./components/Wish";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
 
 function App() {
   return (
     <div className="relative min-h-screen scroll-smooth">
+      <Loader/>
       <Navbar />
 
       {/* Hero Section */}
