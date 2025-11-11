@@ -25,9 +25,6 @@ const Footer = () => {
             </p>
 
           <div className="flex justify-center md:justify-start gap-4 mt-4">
-            <a href="#" className="hover:text-[#E6E39C] transition">
-              <FaFacebookF />
-            </a>
             <a href="https://www.instagram.com/_hustlemind.co?igsh=MTR0ZjI1dnVzMXR4eA==" className="hover:text-[#E6E39C] transition">
               <FaInstagram />
             </a>
@@ -55,9 +52,6 @@ const Footer = () => {
           <div className="flex justify-center gap-4 mt-4">
             <a href="https://www.facebook.com/studioravana" className="hover:text-[#E6E39C] transition">
               <FaFacebookF />
-            </a>
-            <a href="#" className="hover:text-[#E6E39C] transition">
-              <FaInstagram />
             </a>
             <a href="https://wa.me/c/94763333673" className="hover:text-[#E6E39C] transition">
               <FaWhatsapp />
