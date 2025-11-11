@@ -23,7 +23,7 @@ const Countdown = () => {
     return () => clearInterval(interval);
   }, [weddingDate]);
 
-  const headingText = "Countdown to Our Special Day";
+  const headingText = "Until the Big Day";
 
   const countdownUnits = [
     { label: "Days", value: timeLeft.days },
