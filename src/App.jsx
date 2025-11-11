@@ -7,6 +7,7 @@ import Countdown from "./pages/Countdown";
 import Event from "./pages/Event"
 import Gallery from "./pages/Gallery";
 import Wish from "./components/Wish";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       </section>
 
       <Wish/>
+      <Footer/>
     
     </div>
   );
