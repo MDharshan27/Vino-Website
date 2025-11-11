@@ -18,7 +18,7 @@ const Intro = () => {
     }),
   };
 
-  const headingText = "Meet Our Couple";
+  const headingText = "Bride & Groom";
   const brideName = "Vinothini";
   const groomName = "Vinoth";
 
