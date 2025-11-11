@@ -4,7 +4,6 @@ import Bride from "../assets/Bride.jpg";
 import Groom from "../assets/Groom.jpg";
 
 const Intro = () => {
-  // Text animation for each letter
   const letterAnimation = {
     hidden: { y: 50, opacity: 0 },
     visible: (i) => ({
@@ -19,7 +18,7 @@ const Intro = () => {
   };
 
   const headingText = "Bride & Groom";
-  const brideName = "Vinothini";
+  const brideName = "Vinothani";
   const groomName = "Vinoth";
 
   return (

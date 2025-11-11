@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <h1 className="text-2xl md:text-3xl font-playfair text-[#E6E39C] tracking-wide">
-           Vinoth & Vinothini
+           Vinoth & Vinothani
         </h1>
 
         {/* Desktop Links */}
