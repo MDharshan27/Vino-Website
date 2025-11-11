@@ -92,7 +92,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="mt-8 border-t border-[#E6E39C]/50 pt-4 text-center text-sm">
+      <div className="mt-8 border-t border-[#E6E39C]/50 pt-4 text-center text-sm footer-text">
         &copy; {new Date().getFullYear()} HustleMind Co. All Rights Reserved.
       </div>
     </footer>
