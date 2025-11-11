@@ -21,6 +21,14 @@ const Hero = () => {
     }),
   };
 
+  // Scroll to Events section
+  const scrollToEvents = () => {
+    const eventSection = document.getElementById("event");
+    if (eventSection) {
+      eventSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -84,10 +92,7 @@ const Hero = () => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
-            onClick={() => {
-              const eventSection = document.getElementById("events");
-              eventSection?.scrollIntoView({ behavior: "smooth" });
-            }}
+            onClick={scrollToEvents}
             className="px-8 py-4 bg-[#E6E39C] hover:bg-[#B0CE88] text-[#043915] font-semibold rounded-full text-lg transition"
           >
             View Invitation
@@ -95,12 +100,13 @@ const Hero = () => {
 
           {/* Scroll Down Arrow with Text */}
           <motion.div
-            className="flex flex-col items-center mt-8 text-[#E6E39C]"
+            className="flex flex-col items-center mt-8 text-[#E6E39C] cursor-pointer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
+            onClick={scrollToEvents}
           >
-            <span className="mt-1 text-[#E6E39C] text-sm md:text-base font-medium">
+            <span className="mt-1 text-sm md:text-base font-medium">
               Scroll Down
             </span>
             <motion.span
@@ -114,7 +120,7 @@ const Hero = () => {
         </div>
       </section>
 
-      {/* Intro Section (separate, clean below hero) */}
+      {/* Intro Section */}
       <Intro />
     </>
   );
