@@ -37,8 +37,8 @@ const Countdown = () => {
       <motion.div
         className="flex flex-col items-center justify-center gap-8 md:gap-12 px-6 md:px-16"
         initial="hidden"
-        whileInView="visible"           // <-- Trigger animation on scroll into view
-        viewport={{ once: true, amount: 0.3 }} // play once when 30% visible
+        whileInView="visible"     
+        viewport={{ once: true, amount: 0.3 }} 
       >
         {/* Animated Heading */}
         <motion.h2
