@@ -80,15 +80,18 @@ const Hero = () => {
           </motion.h2>
 
           {/* CTA Button */}
-          <motion.a
+          <motion.button
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
-            href="#invitation"
+            onClick={() => {
+              const eventSection = document.getElementById("events");
+              eventSection?.scrollIntoView({ behavior: "smooth" });
+            }}
             className="px-8 py-4 bg-[#E6E39C] hover:bg-[#B0CE88] text-[#043915] font-semibold rounded-full text-lg transition"
           >
             View Invitation
-          </motion.a>
+          </motion.button>
 
           {/* Scroll Down Arrow with Text */}
           <motion.div
