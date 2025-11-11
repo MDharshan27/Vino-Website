@@ -72,12 +72,17 @@ const Wish = () => {
         viewport={{ once: true }}
       >
         {/* Animated Heading */}
-        <motion.h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold mb-4 md:mb-6 leading-snug break-normal whitespace-pre-wrap">
+        <motion.h2
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 md:mb-6 leading-snug break-normal whitespace-pre-wrap"
+        >
           {headingText.split("").map((char, index) => (
             <motion.span
               key={index}
               custom={index}
               variants={letterAnimation}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
               className="inline-block"
             >
               {char === " " ? "\u00A0" : char}
