@@ -50,7 +50,7 @@ const Wish = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[130vh] md:h-[140vh] lg:h-[150vh] flex items-start justify-start text-[#FFFD8F] font-playfair overflow-hidden py-20 px-6 md:px-16">
+    <section className="relative w-full h-[120vh] md:h-[130vh] lg:h-[140vh] flex items-start justify-start text-[#FFFD8F] font-playfair overflow-hidden py-20 px-6 md:px-16">
       {/* Background Image with gradient overlay */}
       <div
         className="absolute inset-0 bg-cover"
