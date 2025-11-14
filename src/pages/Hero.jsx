@@ -95,7 +95,7 @@ const Hero = ({ startAnimation }) => {
                 : { y: 50, opacity: 0 }
             }
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-xl md:text-2xl text-[#043915] mb-8"
+            className="text-xl md:text-2xl text-[#B0CE88] mb-8"
           >
             Join us for our special moments
           </motion.h2>
