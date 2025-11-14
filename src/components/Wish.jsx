@@ -56,8 +56,8 @@ const Wish = () => {
         className="absolute inset-0 bg-cover"
         style={{
           backgroundImage: `linear-gradient(
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.4)
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.3)
           ), url(${wishImage})`,
           backgroundSize: "cover",
           backgroundPosition: bgPosition,
@@ -73,7 +73,7 @@ const Wish = () => {
       >
         {/* Animated Heading */}
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 md:mb-6 leading-snug break-normal whitespace-pre-wrap"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 leading-snug break-normal whitespace-pre-wrap"
         >
           {headingText.split("").map((char, index) => (
             <motion.span
@@ -94,7 +94,7 @@ const Wish = () => {
         {paragraphLines.map((line, i) => (
           <motion.p
             key={i}
-            className="text-base sm:text-lg md:text-2xl lg:text-3xl text-[#E6E39C] font-light leading-relaxed max-w-full md:max-w-3xl mb-1 md:mb-2 break-normal whitespace-pre-wrap"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#E6E39C] font-light leading-relaxed max-w-full md:max-w-3xl mb-1 md:mb-2 break-normal whitespace-pre-wrap"
             custom={i}
             variants={paragraphVariant}
           >
