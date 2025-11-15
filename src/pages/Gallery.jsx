@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // Import images
 import img1 from "../assets/SAT07123.png";
 import img2 from "../assets/SAT07494.png";
-import img3 from "../assets/SAT07588.png";
+import img3 from "../assets/SAT07053.png";
 import img4 from "../assets/SAT06727.png";
 import img5 from "../assets/SAT07287.png";
 import img6 from "../assets/SAT07558.png";
