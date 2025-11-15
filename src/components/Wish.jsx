@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import wishImage from "../assets/SAT06892.png";
+import wishImage from "../assets/SAT06892.jpg";
 
 const Wish = () => {
   const headingText =
