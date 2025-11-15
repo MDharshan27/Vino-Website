@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import heroImage from "../assets/SAT06874.jpg";
+import heroImage from "../assets/SAT06874.png";
 import Intro from "../components/Intro";
 
 const Hero = ({ startAnimation }) => {
