@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import storyImage from "../assets/SAT07095.jpg";
+import storyImage from "../assets/SAT07095.png";
 
 const OurStory = () => {
   const headingText = "Our Love Story";
